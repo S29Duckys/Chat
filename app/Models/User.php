@@ -14,6 +14,12 @@ use Illuminate\Notifications\Notifiable;
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable
 {
+    public function getIncrementingId(): string|int
+    {
+        // Retourne l'ID utilisateur stable pour le broadcasting
+        return (string) $this->id;
+    }
+    
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
