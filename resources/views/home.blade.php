@@ -6,6 +6,10 @@
     @vite(['resources/css/home.css'])
 @endpush
 
+@vite([
+    'resources/js/home/home.js'
+])
+
 @section('content')
 <div class="landing-page">
 
@@ -78,11 +82,12 @@
 
                 <form class="join-form">
                     <input
+                    class="inputToken"
                         type="text"
                         placeholder="Token de session"
                     >
 
-                    <button type="submit">
+                    <button class="joinSession" type="button">
                         Rejoindre
                     </button>
                 </form>
