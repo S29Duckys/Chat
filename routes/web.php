@@ -3,11 +3,10 @@
 // routes/web.php
 
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 // Page du chat : /chat?with=SESSION_ID_DU_DESTINATAIRE
 Route::get('/chat', [MessageController::class, 'index']);
