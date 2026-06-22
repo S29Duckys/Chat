@@ -227,3 +227,175 @@ body{
         height:50px;
     }
 }
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+.hidden{
+    display:none;
+}
+
+.session-popup{
+
+    width:540px;
+    max-width:95%;
+
+    background:#121212;
+
+    border:2px solid #1794ff;
+
+    border-radius:18px;
+
+    padding:55px 60px;
+
+    color:white;
+}
+
+.session-popup h2{
+
+    text-align:center;
+
+    font-size:52px;
+
+    margin-bottom:70px;
+
+    font-weight:700;
+}
+
+.field{
+
+    margin-bottom:45px;
+}
+
+.field label{
+
+    display:block;
+
+    font-size:28px;
+
+    margin-bottom:18px;
+}
+
+.token-row{
+
+    display:flex;
+
+    gap:12px;
+}
+
+.session-popup input{
+
+    flex:1;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#5b5b5b;
+
+    color:white;
+
+    font-size:18px;
+
+    padding:0 18px;
+}
+
+.session-popup input::placeholder{
+
+    color:#d0d0d0;
+}
+
+.session-popup input:focus{
+
+    outline:none;
+}
+
+.copy-btn{
+
+    width:70px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#d8d8d8;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.2s;
+}
+
+.copy-btn:hover{
+
+    background:white;
+}
+
+.popup-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.create-btn{
+
+    flex:1;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1794ff;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+}
+
+.cancel-btn{
+
+    flex:1;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#333;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+}
+
+.create-btn:hover{
+
+    background:#0f82e6;
+}
+
+.cancel-btn:hover{
+
+    background:#444;
+}

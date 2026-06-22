@@ -11,6 +11,56 @@
 ])
 
 @section('content')
+<script>
+    window.__USER__ = {
+        token: @json($myId) // ou auth()->user()->token selon ton contrôleur
+    };
+</script>
+<div id="sessionModal" class="modal hidden">
+
+    <div class="session-popup">
+
+        <h2>Create Session</h2>
+
+        <div class="field">
+            <label>Your token :</label>
+
+            <div class="token-row">
+                <input
+                    type="text"
+                    id="userToken"
+                    readonly
+                >
+
+                <button id="copyTokenBtn" class="copy-btn">
+                    📋
+                </button>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Your friend token :</label>
+
+            <input
+                type="text"
+                id="friendToken"
+                placeholder="Paste your friend's token"
+            >
+        </div>
+
+        <div class="popup-buttons">
+            <button id="createSessionBtn" class="create-btn">
+                Create Session
+            </button>
+
+            <button id="closeModalBtn" class="cancel-btn">
+                Cancel
+            </button>
+        </div>
+
+    </div>
+
+</div>
 <div class="landing-page">
 
     <!-- Header -->
@@ -63,7 +113,7 @@
                     Génère un token unique à partager avec vos contacts.
                 </p>
 
-                <button class="btn-primary">
+                <button class="btn-primary newSessionBtn">
                     Nouvelle session
                 </button>
             </div>
@@ -102,4 +152,5 @@
     </main>
 
 </div>
+
 @endsection
