@@ -1,4 +1,4 @@
-import { copyId } from "../chat/ui";
+import { copyId } from "../chat/index.js";
 
 const sendBtnHome = document.querySelector(".joinSession");
 const inputHome = document.querySelector(".inputToken");

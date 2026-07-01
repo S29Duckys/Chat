@@ -26,14 +26,3 @@ export function appendSystem(text) {
     messagesEl.scrollTop = messagesEl.scrollHeight;
 }
 
-export function copyId(myId) {
-    navigator.clipboard.writeText(myId);
-
-    const btn = document.querySelector(".copy-btn");
-    if (!btn) return;
-
-    btn.textContent = "Copié !";
-    setTimeout(() => {
-        btn.textContent = "Copier";
-    }, 2000);
-}

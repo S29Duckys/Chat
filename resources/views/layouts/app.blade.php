@@ -15,5 +15,8 @@
 
     @yield('content')
 
+    {{-- Scripts spécifiques à la page --}}
+    @stack('scripts')
+
 </body>
 </html>

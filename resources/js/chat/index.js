@@ -1,5 +1,5 @@
 import "../echo.js";
-import { appendMessage, copyId } from "./ui.js"; // ← retire inputEl
+import { appendMessage } from "./ui.js";
 import { initSocket, sendRaw } from "./socket.js";
 import { buildCommands, parseCommand } from "./commands.js";
 
@@ -43,3 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "Enter") sendMessage();
     });
 });
+
+export function copyId(myId) {
+    navigator.clipboard.writeText(myId);
+
+    const btn = document.querySelector(".copy-btn");
+    if (!btn) return;
+
+    btn.textContent = "Copié !";
+    setTimeout(() => {
+        btn.textContent = "Copier";
+    }, 2000);
+}
+

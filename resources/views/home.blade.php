@@ -6,14 +6,15 @@
     @vite(['resources/css/home.css'])
 @endpush
 
-@vite([
-    'resources/js/home/home.js'
-])
+@push('scripts')
+    @vite(['resources/js/home/home.js'])
+@endpush
 
 @section('content')
+
 <script>
     window.__USER__ = {
-        token: @json($myId) // ou auth()->user()->token selon ton contrôleur
+        token: @json($myId)
     };
 </script>
 <div id="sessionModal" class="modal hidden">
